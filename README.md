@@ -1,2 +1,2 @@
 # MLDocker
-File for the course on deploying an ML model using DOcker
+File for the course on deploying an ML model using Docker
