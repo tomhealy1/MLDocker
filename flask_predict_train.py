@@ -11,6 +11,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import confusion_matrix
 import pandas as pd
 
 #loading the dataset
@@ -33,4 +34,13 @@ predicted = clf.predict(X_test)
 # Accuracy Should add in confusion matrix
 
 print(accuracy_score(predicted, y_test))
+#print(confusion_matrix(X_test, y_test))
 
+
+
+
+import pickle
+
+with open('/Users/Teamwork/Desktop/rf.pkl', 'wb') as model_pkl:
+    pickle.dump(clf, model_pkl)
+    
