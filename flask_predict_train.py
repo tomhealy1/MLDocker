@@ -30,7 +30,7 @@ clf.fit(X_train, y_train)
 #Predictions
 predicted = clf.predict(X_test)
 
-# Accuracy
+# Accuracy Should add in confusion matrix
 
 print(accuracy_score(predicted, y_test))
 
