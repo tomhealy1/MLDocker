@@ -19,8 +19,6 @@ swagger = Swagger(app)
 def predict_iris():
     """Example endpoint returning a prediction of iris
     ---
-    tags:
-    - Iris Prediction API Input Values
     parameters:
       - name: s_length
         in: query
@@ -39,8 +37,8 @@ def predict_iris():
         type: number
         required: true
     responses:
-          200:
-            description: OK
+        200:
+          description: OK
     """
     s_length = request.args.get("s_length")
     s_width = request.args.get("s_width")
@@ -68,8 +66,7 @@ def predict_iris_file():
     return str(list(prediction))
 
 if __name__ == '__main__':
-    app.run()
-    
+    app.run(host='0.0.0.0', port=5000)
     
     
     
